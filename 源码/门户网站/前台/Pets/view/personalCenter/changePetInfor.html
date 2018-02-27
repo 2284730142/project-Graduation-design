@@ -1,0 +1,58 @@
+<div class="personInfo-bg">
+    <div>
+        <div class="personInfo-wrapper">
+    <div class="personInfo-left">
+        <p><b>个人设置</b></p>
+        <p><a href="#/personCenter">个人中心</a></p>
+        <p><a href="#/personOrder">我的订单</a></p>
+        <p><a href="#/changePassword">修改密码</a></p>
+        <p><a href="#/createPetInfor">添加宠物</a></p>
+        <p><a href="#/changePersonInfor">修改个人信息</a></p>
+    </div>
+    <!-- // 右边导航 -->
+    <div class="personInfo-right">
+        <div style="overflow:hidden;">
+            <p class="personInfo-right-1" style="width:120px;">修改宠物信息</p>
+            <p class="personInfo-right-2" style="width:700px;"></p>
+        </div>
+        <!-- //右边表单 -->
+        <div class="personInfo-right-form">
+            <form ng-submit="btnChangePet();">
+                <!-- 昵称 -->
+                <div>
+                    <label for="petBab"><span>* </span>名字：</label>
+                    <input type="text" id="petBab" ng-model="currentList.Name"/>
+                </div>
+                <!-- 年龄 -->
+                <div>
+                    <label for="petOld"><span>* </span>年龄：</label>
+                    <input type="text" id="petOld" ng-model="currentList.Age"/>
+                </div>
+                <!-- 性别 -->
+                <div style="position: relative;height:32px;">
+                    <label style="position: absolute;top:15px;left:0px;"><span>* </span>性别：</label>
+                    <div style="position: absolute;top:15px;left:170px;">公</div>
+                    <div class="sex-btn" style="position: absolute;left:190px;">
+                        <input type="radio" id="male" name="nv" ng-model="currentList.Sex"/>
+                        <label for="male" id="sexBtn"></label>
+                        <input type="radio" id="female" name="nv" ng-model="currentList.Sex"/>
+                    </div>
+                    <div style="position: absolute;top:15px;left:300px;">母</div>
+                </div>
+                <!-- 类别 -->
+                <div>
+                    <label><span>* </span>类别：</label>
+                    <select name="" id="petCategory" ng-model="currentList.cateId" style="width:145px;">
+                        <option ng-repeat="item in petClassList" value="{{item.Id}}">{{item.Name}}</option>
+                    </select>
+                </div>
+                <!-- 提交 -->
+                <div>
+                    <button type="submit" class="btnSubmit">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</div>

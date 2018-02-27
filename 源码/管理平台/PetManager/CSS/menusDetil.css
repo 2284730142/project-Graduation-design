@@ -1,0 +1,39 @@
+	.menus-wrapper{
+	margin:15px 0 5px 20px;
+	border:1px solid #f2f2f2;
+	overflow:hidden;
+	width:1280px;
+	border-radius:5px;
+}
+.menus-wrapper>div:first-child{
+	float:left;
+	padding:3px 15px 3px 3px;
+}
+.menus-wrapper img{
+	width:210px;
+	height:140px;
+	display: inline-block;
+	border-radius:5px;
+}
+.menus-wrapper>div:nth-child(2){
+	float:left;
+	width:940px;
+	padding-top:10px;
+	color:#999;
+	overflow:hidden;
+}
+.menus-Name{
+	font-size:18px;
+	font-weight:600;
+	color:#333;
+}
+.menus-price{
+	color:#ff9900;
+	font-size:16px;
+}
+.menus-content{color:#333333;}
+.menus-op{
+	float:right;
+	padding-bottom:10px;
+}
+

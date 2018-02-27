@@ -1,0 +1,21 @@
+.changeBody
+{
+	margin-left: 20px;
+}
+.changeBody input
+{
+	width: 300px;
+	height: 35px;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #d5d5d5;
+	padding-left: 10px;
+}
+.changeBody>form>div
+{
+	margin-top: 30px;
+}
+.changeBody input:focus
+{
+	border: 1px solid #31B0D5;
+}

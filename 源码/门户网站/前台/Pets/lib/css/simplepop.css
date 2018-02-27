@@ -1,0 +1,112 @@
+.popMask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.popMain {
+    position: fixed;
+    overflow: hidden;
+    display: none;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.popMain .info_icon {
+    background: #fff url("../../images/meirong04.jpg") no-repeat 0 50%;
+    background-size: contain;
+}
+
+.popMain .right_icon {
+    background: #fff url("../../images/meirong04.jpg") no-repeat 0 50%;
+    background-size: contain;
+}
+
+.popMain .error_icon {
+    background: #fff url("../../images/meirong04.jpg") no-repeat 0 50%;
+    background-size: contain;
+}
+
+.popMain .confirm_icon {
+    background: #fff url("../../images/meirong04.jpg") no-repeat 0 50%;
+    background-size: contain;
+}
+
+.popTitle {
+    background: teal;
+    display: none;
+    color: #fff;
+}
+
+.popTitle .text {
+    margin-left: 12px;
+    line-height: 28px;
+}
+
+.popTitle .icon {
+    float: left;
+    margin: 6px 0 0 6px;
+    width: 16px;
+    height: 16px;
+}
+
+.popTitle .close {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 16px;
+    margin: 0px 12px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.popTitle .close:hover {
+    color: #ddd;
+}
+
+.popContent {
+    background: #fff;
+    overflow: auto;
+    padding: 20px 40px;
+}
+
+.popContent .layer_msg {
+    padding-left: 80px;
+    max-width: 400px;
+    text-align: right;
+}
+
+.popContent .layer_msg p {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.popContent .layer_msg input {
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+.popContent .layer_msg button {
+    border: none;
+    cursor: pointer;
+    padding: 6px 20px;
+    background-color: tan;
+    margin-left: 20px;
+    color: #333;
+}
+
+.popContent .layer_msg button:hover {
+    background-color: #00AA98;
+    color: #fff;
+}
+
+.popContent .layer_msg button:active {
+    background-color: #00AA98;
+    color: #fff;
+}
+
+/*# sourceMappingURL=simplepop.css.map */

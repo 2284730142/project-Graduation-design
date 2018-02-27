@@ -1,0 +1,106 @@
+<div class="personInfo-bg">
+    <div>
+        <div class="personInfo-wrapper">
+            <div class="personInfo-left">
+                <p><b>个人设置</b></p>
+                <p><a href="#/personCenter">个人中心</a></p>
+                <p><a href="#/personOrder">我的订单</a></p>
+                <p><a href="#/changePassword">修改密码</a></p>
+                <p><a href="#/createPetInfor">添加宠物</a></p>
+                <p><a href="#/changePersonInfor">修改个人信息</a></p>
+            </div>
+            <div class="personInfo-right">
+                <div style="overflow:hidden;">
+                    <p class="personInfo-right-1" style="width:120px;">修改个人信息</p>
+                    <p class="personInfo-right-2" style="width:700px;"></p>
+                </div>
+                <div class="personInfo-right-form">
+                    <form novalidate ng-submit="btnChangePer();" name="frm2">
+                        <!-- 真实姓名 -->
+                        <div>
+                            <label for="trueName"><span>* </span>真实姓名：</label>
+                            <input type="text" id="trueName" name="trueName" ng-model="changePer.TrueName" required pattern="[\u4E00-\u9FA5]{2,4}"/>
+                             <span ng-show="frm2.trueName.$pristine && !frm2.submitted">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                请输入2~4位的汉字
+                            </span>
+                            <span ng-show="frm2.trueName.$dirty && frm2.trueName.$valid">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                当前真实姓名有效
+                            </span>
+                            <span ng-show="(frm2.trueName.$dirty || frm2.submitted) && frm2.trueName.$error.pattern">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                真实姓名长度为2~4位汉字
+                            </span>
+                            <span ng-show="(frm2.trueName.$dirty || frm2.submitted) && frm2.trueName.$error.required">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                真实名称不能为空
+                            </span>
+                        </div>
+                        <!-- 性别 -->
+                        <div style="position: relative;height:32px;">
+                            <label style="position: absolute;top:15px;left:0px;"><span>* </span>性别：</label>
+                            <div style="position: absolute;top:15px;left:170px;">男</div>
+                            <div class="sex-btn" style="position: absolute;left:190px;">
+                                <input type="radio" id="male" name="nv" ng-model="changePer.Sex" value="男"/>
+                                <label for="male" id="sexBtn"></label>
+                                <input type="radio" id="female" name="nv" ng-model="changePer.Sex" value="女"/>
+                            </div>
+                            <div style="position: absolute;top:15px;left:300px;">女</div>
+                        </div>
+                        <!-- 手机号 -->
+                        <div>
+                            <label for="personPhone"><span>* </span>手机号：</label>
+                            <input type="text" id="personPhone" name="phone" ng-model="changePer.Phone" required pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$"/>
+                            <span ng-show="frm2.phone.$pristine && !frm2.submitted">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                请输入11位有效的电话号码
+                            </span>
+                            <span ng-show="frm2.phone.$dirty && frm2.phone.$valid">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                当前电话号码有效
+                            </span>
+                            <span ng-show="(frm2.phone.$dirty || frm2.submitted) && frm2.phone.$error.pattern">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                电话号码存在有效并且长度为11位数字组成
+                            </span>
+                            <span ng-show="(frm2.phone.$dirty || frm2.submitted) && frm2.phone.$error.required">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                电话号码不能为空
+                            </span>
+                        </div>
+                        <!-- 身份证 -->
+                        <div>
+                            <label for="idCard"><span>* </span>身份证：</label>
+                            <input type="text" id="idCard" name="idCard" ng-model="changePer.CardId" required pattern="^\d{15}|\d{18}$"/>
+                             <span ng-show="frm2.idCard.$pristine && !frm2.submitted">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                请输入15位或者18位有效的身份证号码
+                            </span>
+                            <span ng-show="frm2.idCard.$dirty && frm2.idCard.$valid">
+                                <i class="icon-info-circled" style="color: #666666"></i>
+                                当前身份证号码有效
+                            </span>
+                            <span ng-show="(frm2.idCard.$dirty || frm2.submitted) && frm2.idCard.$error.pattern">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                身份证存在有效并且长度为15位或者18位数字组成
+                            </span>
+                            <span ng-show="(frm2.idCard.$dirty || frm2.submitted) && frm2.idCard.$error.required">
+                                <i class="icon-cancel-circled" style="color: #FE5F40"></i>
+                                身份证号码不能为空
+                            </span>
+                        </div>
+                        <!-- 地址 -->
+                        <div>
+                            <label for="address"><span>* </span>地址：</label>
+                            <input type="text" id="address" name="address" ng-model="changePer.Address"/>
+                        </div>
+                        <div>
+                            <button type="submit" class="btnSubmit">提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

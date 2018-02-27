@@ -1,0 +1,62 @@
+<div class="personInfo-bg">
+    <div>
+        <div class="personInfo-wrapper">
+    <div class="personInfo-left">
+        <p><b>个人设置</b></p>
+        <p><a href="#/personCenter">个人中心</a></p>
+        <p><a href="#/personOrder">我的订单</a></p>
+        <p><a href="#/changePassword">修改密码</a></p>
+        <p><a href="#/createPetInfor">添加宠物</a></p>
+        <p><a href="#/changePersonInfor">修改个人信息</a></p>
+        <!--<p><a href="#/createOrder">创建新订单</a></p>-->
+    </div>
+    <!-- // 右边导航 -->
+    <div class="personInfo-right">
+        <div style="overflow:hidden;">
+            <p class="personInfo-right-1">创建订单</p>
+            <p class="personInfo-right-2"></p>
+        </div>
+        <!-- //右边表单 -->
+        <div class="personInfo-right-form">
+            <form novalidate ng-submit="btnNewOrder();" name="myForm">
+                <div>
+                    <label for="master"><span>* </span>用户名</label>
+                    <input type="text" id="master" ng-model="newOrder.personName" readonly disabled/>
+                </div>
+                    <input type="hidden" id="masterid" ng-model="newOrder.personId"/>
+
+
+                <!-- 服务 -->
+                <div>
+                    <label for="service"><span>* </span>服务类别：</label>
+                    <input type="text" id="service" ng-model="newOrder.serviceName" readonly disabled/>
+                </div>
+                <input type="hidden" id="serviceid" ng-model="newOrder.serviceId"/>
+                <div>
+                    <label for="orderdate"><span>* </span>下单时间</label>
+                    <input type="text" id="orderdate" ng-model="newOrder.orderDate" readonly disabled/>
+                </div>
+
+                <!-- 宠物信息-->
+                <div>
+                    <label><span>* </span>宠物：</label>
+                    <select name="" id="petCategory" ng-model="newOrder.petId">
+                        <option value="" >宠物对象</option>
+                        <option ng-repeat="item in petDate" value="{{item.Id}}">{{item.Name}}</option>
+                    </select>
+                </div>
+                <!--备注-->
+                <div>
+                    <label for="message"><span>* </span>备注</label>
+                    <input type="text" id="message" ng-model="newOrder.message" style="height: 60px;"/>
+                </div>
+                <!-- 提交 -->
+                <div>
+                    <button type="submit" class="btnSubmit">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</div>

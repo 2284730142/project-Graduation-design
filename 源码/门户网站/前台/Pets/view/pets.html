@@ -1,0 +1,20 @@
+<div class="pets-container">
+    <div class="pets">
+        <div class="pets-title">{{petServiceName}}</div>
+        <video id="myVideo"  width="1080" height="540" style="background: black" controls autoplay></video>
+        <div class="pets-model" ng-repeat="item in serviceViewData">
+            <div class="pets-image"><img ng-src="images/{{item.Image.slice(40)}}" width="210px" height="140px"/></div>
+            <div class="pets-content">
+                <div>{{item.Name}}</div>
+                <div>{{item.Content}}</div>
+            </div>
+            <div class="pets-operation">
+                <div></div>
+                <div>价格:<span class="pets-price">{{'¥'+item.Price}}</span></div>
+                <div><a ng-click="order(item.Id)" style="cursor:pointer;">立即预约</a></div>
+            </div>
+        </div>
+        <div class="more" ng-click="addMore()" style="cursor:pointer;">{{moreInfo}}</div>
+    </div>
+</div>
+

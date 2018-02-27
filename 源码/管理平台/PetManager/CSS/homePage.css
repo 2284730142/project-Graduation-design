@@ -1,0 +1,130 @@
+.header
+{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+.mainBody
+{
+    width: 100%;
+}
+.mainBody>div
+{
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+}
+.mainBody>div>a
+{
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background:rgba(40,94,142,0.2);
+    color: wheat;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+    margin-left: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+.mainBody>div>a:nth-child(1)
+{
+    margin-left: 0px;
+}
+.mainBody>div>a>span
+{
+    display: block;
+    line-height: 100px;
+}
+.mainBody>div>a>span:nth-child(1)
+{
+    font-size: 30px;
+}
+.mainBody>div>a:hover
+{
+    transform: scale(1.2,1.2);
+    transition: transform 0.8s;
+}
+.mainBody>div>a, .mainBody>div>a::before, .mainBody>div>a::after 
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.mainBody>div>a:nth-child(1)
+{
+    margin-left: 350px;
+    margin-top: 230px;
+}
+.mainBody>div>a:nth-child(2)
+{
+    margin-left: 650px;
+    margin-top: 230px;
+} 
+.mainBody>div>a:nth-child(3)
+{
+    margin-left: 950px;
+    margin-top: 230px;
+}
+.mainBody>div>a:nth-child(4)
+{
+    margin-left: 480px;
+    margin-top: 520px;
+}  
+.mainBody>div>a:nth-child(5)
+{
+    margin-left: 780px;
+    margin-top: 520px;
+}         
+.mainBody>div>a
+{
+    width: 200px;
+    height: 200px;
+    color: #030625;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+}
+.mainBody>div>a::before, .mainBody>div>a::after 
+{
+    content: '';
+    z-index: -1;
+    margin: -5%;
+    box-shadow: inset 0 0 0 2px;
+    animation: clipMe 8s linear infinite;
+}
+.mainBody>div>a::before 
+{
+    animation-delay: -4s;
+}
+.mainBody>div>a:hover::after, .mainBody>div>a:hover::before 
+{
+    background-color: rgba(255, 215, 119, 0.3);
+}
+         
+@keyframes clipMe 
+{
+    0%, 100% 
+    {
+        clip: rect(0px, 220.0px, 2px, 0px);
+    }
+    25% 
+    {
+        clip: rect(0px, 2px, 220.0px, 0px);
+    }
+    50% 
+    {
+        clip: rect(218.0px, 220.0px, 220.0px, 0px);
+    }
+    75% 
+    {
+        clip: rect(0px, 220.0px, 220.0px, 218.0px);
+    }
+}   

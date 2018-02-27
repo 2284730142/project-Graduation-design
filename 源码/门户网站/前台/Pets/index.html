@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <title>首页</title>
+    <meta charset="utf-8">
+    <!--<link rel="stylesheet" href="css/home/reset.css"/>-->
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/fullpage.css"/>
+    <link rel="stylesheet" href="css/indexLR.css"/>
+    <link rel="stylesheet" href="css/encyclopedia.css"/>
+    <link rel="stylesheet" href="css/personCenter.css"/>
+    <link rel="stylesheet" href="css/pets.css"/>
+    <link rel="stylesheet" href="lib/css/simplepop.css"/>
+    <link rel="stylesheet" href="lib/css/fontello.css"/>
+</head>
+<body>
+<!--页眉-->
+<div class="index-header">
+    <div class="index-headerMiddle">
+        <div class="index-logo">
+            <img src="images/150953410786631.png" width="200" height="60" alt=""/>
+        </div>
+        <!--导航-->
+        <div class="index-container">
+            <div class="index-item">
+                <div><a href="#/">首页</a></div>
+            </div>
+            <div class="index-item">
+                <div>服务<i class="icon-down-open"></i></div>
+                <ul class="service">
+                    <!--<li><a href="#/beauty">美容</a></li>
+                    <li><a href="#/fosterCare">寄养</a></li>
+                    <li><a href="#/medical">医疗</a></li>
+                    <li><a href="#/Photography">摄影</a></li>-->
+                </ul>
+            </div>
+            <div class="index-item">
+                <div>百科<i class="icon-down-open"></i></div>
+                <ul>
+                    <li><a href="#/dogRaise">汪星人饲养</a></li>
+                    <li><a href="#/catRaise">喵星人饲养</a></li>
+                    <li><a href="#/totoroRaise">龙猫饲养</a></li>
+                    <li><a href="#/pigRaise">小香猪饲养</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="index-personBtn">
+            <div style="display: block;" id="notLogin">
+                <button class="login" id="login">登录</button>
+                <button class="register" id="register">注册</button>
+            </div>
+            <div style="display: none;" id="yesLogin">
+                <button class="user"><a id="personCenter"><i class="icon-user-o"></i><i id="personCenterIcon" class="icon-down-open"></i></a></button>
+                <div>
+                    <div></div>
+                    <div>
+                        <ul>
+                            <li><a href="#/personCenter"><i class="icon-cog"></i><span>个人设置</span></a></li>
+                            <li><a href="#/personOrder"><i class="icon-doc-text-inv"></i><span>我的订单</span></a></li>
+                            <li><a href="#" id="logoutLogin"><i class="icon-logout"></i><span>退出登录</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注册&登录-->
+<div class="index-rl">
+    <!--注册页面-->
+    <div class="index-register" id="dialogContainer">
+        <form>
+            <div class="index-model-container" style="background-size: cover">
+                <h3 class="indexLR-h3">新用户注册</h3>
+                <div id="error-register-point"></div>
+                <div>
+
+                    <div class="index-form-item">
+                        <div>
+                            <input type="text" id="nickName" placeholder="首字母为a-z或大写的6-16位" name="nickName">
+                        </div>
+                    </div>
+
+                    <div class="index-form-item">
+                        <div>
+                            <input type="password" id="userPwd" placeholder="密码至少6位" name="userPwd"
+                                   pattern="\S{6,12}">
+                        </div>
+                    </div>
+
+                    <div class="index-form-item">
+                        <div>
+                            <input type="text" id="phone" placeholder="请输入您的手机号" required pattern="1[34578]\d{9}">
+                        </div>
+                    </div>
+                </div>
+                <div class="indexLR-foot">
+                    <button type="submit" class="index-registerBtn" id="model-register">注册</button>
+                    <button class="indexLR-cancel" id="cancel">取消</button>
+                </div>
+                <div class="login-footer">
+                    <span><a id="changeLogin">登录</a><br/>老朋友么？让我们一起呵护您的爱宠吧!</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--登录页面-->
+    <div class="index-login" id="dialogContainer2">
+        <form>
+            <div class="index-model-container" style=" background-size: cover">
+                <h3 class="indexLR-h3">用户登录</h3>
+                <div id="error-login-point"></div>
+                <div>
+                    <div class="index-form-item">
+                        <div>
+                            <input type="text" id="loginName" name="loginName" placeholder="请输入您的用户名或号码" >
+                        </div>
+                    </div>
+
+                    <div class="index-form-item">
+                        <div>
+                            <input type="password" id="loginPwd" name="login-userPwd" placeholder="请输入您的密码">
+                        </div>
+                    </div>
+
+                    <div class="index-form-item">
+                        <div>
+                            <input type="text" style="width: 200px;" placeholder="请输入您的验证码" id="EWM">
+                            <canvas width="100" height="40" id="canvas"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="indexLR-foot" style="background-color: rgba(0,0,0,0)">
+                    <button type="submit" class="index-loginBtn" id="model-login">登录</button>
+                    <button class="indexLR-cancel" id="cancel2">取消</button>
+                </div>
+                <div class="login-footer">
+                    <span><a id="changeRegister">注册</a><br/>新朋友么？让我们一起呵护您的爱宠吧!</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div ng-view></div>
+<script src="lib/js/fullPage.min.js"></script>
+<script src="lib/js/jquery.js"></script>
+<script src="lib/js/simplepop.js"></script>
+<script src="js/index.js"></script>
+<script src="lib/js/angular.js"></script>
+<script src="lib/js/angular-route.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+    $(function () {
+        var indexItem=document.querySelectorAll('.index-item a');
+        for(var i=0;i<indexItem.length;i++)
+        {
+            indexItem[i].onclick= function ()
+            {
+                location.reload();
+            }
+        }
+        //注销
+        var logoutLogin = document.querySelector('#logoutLogin');
+        logoutLogin.onclick = function(){
+            sessionStorage.removeItem('user');
+            location.href = 'index.html';
+            $('#notLogin').css('display', 'block');
+            $('#yesLogin').css('display', 'none');
+            location.reload();
+        }
+    });
+</script>
+</body>
+</html>

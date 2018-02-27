@@ -1,0 +1,50 @@
+<div class="personInfo-bg">
+    <div>
+        <div class="personInfo-wrapper">
+    <div class="personInfo-left">
+        <p><b>个人设置</b></p>
+        <p><a href="#/personCenter">个人中心</a></p>
+        <p><a href="#/personOrder">我的订单</a></p>
+        <p><a href="#/changePassword">修改密码</a></p>
+        <p><a href="#/createPetInfor">添加宠物</a></p>
+        <p><a href="#/changePersonInfor">修改个人信息</a></p>
+    </div>
+    <!-- // -->
+    <div class="order-right">
+        <div style="padding-top:20px;background: #fff;border-radius:3px;">
+            <div class="order-header-wrapper">
+                <!--这里用ng-class+ng-click 来改变订单页的内容，订单页用ng-show来设置显示不显示即可-->
+                <p ng-class="active1" ng-click="btnOrder()">我的订单</p>
+                <p ng-class="active2" ng-click="btnOrderTrue();">已预约订单</p>
+                <p ng-class="active3" ng-click="btnOrderFalse();">已取消订单</p>
+            </div>
+        </div>
+        <!-- 订单页 -->
+        <div class="order-form" ng-repeat="item in myOrder">
+            <div class="order-form-details">
+                <span>服务项目</span>
+                <span>服务明细</span>
+                <span>服务对象</span>
+                <span>预约时间</span>
+                <span>服务价格</span>
+            </div>
+            <div class="order-form-pet">
+                <span>{{item.Menus}}</span>
+                <span>{{item.MenuName}}</span>
+                <span>{{item.PetName}}({{item.PetCategory}})</span>
+                <span>{{item.Date}}</span>
+                <span style="color:#FF8800;">￥{{item.Price}}:00</span>
+            </div>
+            <div class="order-form-cancel">
+                <p class="order-remarks"><span>备注：{{item.Message}}</span></p>
+                <button class="btn-cancel-order-disabled btn-default" ng-show="item.State == 3" disabled>已取消</button>
+                <button class="btn-cancel-order btn-danger" ng-click="btnCancel(item.Id);" ng-show="item.State == 0">取消预约</button>
+                <button class="btn-cancel-order btn-warning" ng-click="btnCancel(item.Id);" ng-show="item.State == 1">取消预约</button>
+                <button class="btn-cancel-order-disabled" ng-show="item.State == 2" disabled style="background: #00aa98;">预约完成</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+</div>

@@ -1,0 +1,796 @@
+body {
+    overflow: hidden;
+}
+
+.pageHead {
+    width: 100%;
+    height: 60px;
+    background-color: #34B7E1;
+    color: #030625;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.pageHead > div:nth-child(1) {
+    margin-left: 65px;
+    margin-top: 10px;
+    color: #030625;
+    font-size: 25px;
+}
+
+.pageHead > div:nth-child(2) {
+    position: absolute;
+    right: 40px;
+    line-height: 60px;
+}
+
+.pageBody {
+    display: flex;
+}
+
+.pageNav {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    background-color: #030625;
+}
+
+.pageNav > div {
+    width: 100%;
+    text-align: center;
+    color: #269abc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pageNav > div img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.pageNav a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.navActive {
+    background-color: #31b0d5;
+}
+
+.pageRight {
+    position: absolute;
+    left: 200px;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    overflow: scroll;
+}
+
+.backBtn {
+    margin-top: 20px;
+}
+
+.myTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.input-search {
+    width: 220px;
+    height: 34px;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-search:focus {
+    border: 1px solid #31B0D5;
+}
+
+.mySelect {
+    width: 180px;
+    height: 34px;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    border-radius: 5px;
+}
+
+.mySelect:focus {
+    border: 1px solid #31B0D5;
+}
+
+.addLibClass {
+
+    display: flex;
+
+}
+
+.addReaderClass {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.addReaderClass .div1 {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+}
+
+.div1 {
+    background-color: white;
+    float: left;
+}
+
+.addLibClass > div:nth-child(1) {
+    margin-left: 30px;
+}
+
+.addLibClass > div:nth-child(2) {
+    margin-left: 30px;
+}
+
+.div2 {
+    margin-top: 12px;
+    display: flex;
+}
+
+.div2 input {
+    width: 300px;
+    height: 34px;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+    outline: none;
+    border-radius: 5px;
+}
+
+.div2 input:focus {
+    border: 1px solid #31B0D5;
+}
+
+.div2 select {
+    width: 300px;
+}
+
+.div2 > span:nth-child(1) {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.success {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+
+.danger {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.default {
+    display: inline-block;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    color: #666;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:disabled {
+    background-color: #666666;
+}
+
+.addLibsBtn {
+    margin-top: 20px;
+}
+
+.div2 textarea {
+    width: 500px;
+    height: 200px;
+}
+
+.authorsList {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.authorsList > div {
+    margin: 20px auto;
+    width: 250px;
+    height: 320px;
+    padding: 10px;
+    position: relative;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 60px 5px;
+    -webkit-border-top-right-radius: 60px 5px;
+    -webkit-border-bottom-right-radius: 60px 60px;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.authorsList > div:before {
+    content: '';
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+}
+
+.authorsList > div:after {
+    content: '';
+    z-index: -10;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+}
+
+.authorsList > div > div:nth-child(1) {
+    position: relative;
+    height: 100px;
+    text-align: center;
+}
+
+.authorsList > div > div {
+    margin-top: 8px;
+}
+
+.authorsList > div > div:nth-child(1) img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.authorsList > div > div:nth-child(3) {
+    margin-top: 15px;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.authorsList > div > div:last-child {
+    text-align: center;
+}
+
+.libsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.libsList > div {
+    margin: 20px auto;
+    width: 250px;
+    height: 370px;
+    padding: 10px;
+    position: relative;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 60px 5px;
+    -webkit-border-top-right-radius: 60px 5px;
+    -webkit-border-bottom-right-radius: 60px 60px;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.libsList > div:before {
+    content: '';
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+}
+
+.libsList > div:after {
+    content: '';
+    z-index: -10;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+}
+
+.libsList > div > div:nth-child(1) {
+    position: relative;
+    height: 100px;
+    text-align: center;
+}
+
+.libsList > div > div {
+    margin-top: 8px;
+}
+
+.libsList > div > div:nth-child(1) img {
+    width: 100px;
+    height: 100px;
+}
+
+.libsList > div > div:nth-child(1) div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.libsList > div > div:nth-child(2) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.libsList > div > div:nth-child(5) {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.libsList > div > div:nth-child(6) {
+    text-align: center;
+}
+
+.detailImg {
+    text-align: center;
+    position: relative;
+}
+
+.detailImg > img {
+    width: 400px;
+    height: 250px;
+
+}
+
+.detailImg > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.detailImg > img:nth-child(2) {
+    margin-left: 50px;
+}
+
+.detailMes {
+    padding-left: 220px;
+    padding-right: 220px;
+}
+
+.detailMes > div {
+    margin-top: 20px;
+}
+
+.detailMes > div span {
+    display: inline-block;
+}
+
+.detailMes > div > span:nth-child(1) {
+    width: 80px;
+    font-weight: 600;
+}
+
+.detailMes > div:last-child > span:nth-child(2) {
+    margin-top: 10px;
+}
+
+.alert {
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    font-size: 20px;
+    color: white;
+    left: 40%;
+    top: 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    line-height: 80px;
+    border-radius: 10px;
+}
+
+.addHeader {
+    text-align: center;
+}
+
+.div2 textarea {
+    width: 400px;
+    height: 150px;
+}
+
+#thisDetail {
+    display: flex;
+}
+
+#thisDetail img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#thisDetail > div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.bookSearch {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.bookSearch select {
+    width: 130px;
+    height: 30px;
+}
+
+.bookSearch select:nth-child(2) {
+    margin-left: 20px;
+}
+
+.booksList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.booksList > div {
+    margin: 20px auto;
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    position: relative;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1, #fff));
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 60px 5px;
+    -webkit-border-top-right-radius: 60px 5px;
+    -webkit-border-bottom-right-radius: 60px 60px;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.booksList > div:before {
+    content: '';
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-20deg) skew(-40deg, -3deg) translate(-13px, -13px);
+}
+
+.booksList > div:after {
+    content: '';
+    z-index: -10;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(0deg) translate(-45px, -20px) skew(20deg);
+}
+
+.booksList > div > div:nth-child(1) {
+    position: relative;
+    height: 100px;
+    text-align: center;
+}
+
+.booksList > div > div {
+    margin-top: 8px;
+}
+
+.booksList > div > div:nth-child(1) img {
+    width: 100px;
+    height: 100px;
+}
+
+.booksList > div > div:nth-child(1) div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.booksList > div > div:nth-child(2) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.booksList > div > div:last-child {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.bookDetail {
+    margin-left: 50px;
+}
+
+.bookDetail img {
+    width: 200px;
+    height: 200px;
+}
+
+.bookDetail > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.bookDetail > div:nth-child(1) > div:last-child {
+    line-height: 30px;
+}
+
+.bookDetail > div:nth-child(1) > div:last-child > span:nth-child(1) {
+    color: #269abc;
+}
+
+.bookDetail > div:nth-child(1) > div {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.bookDetail > div:nth-child(1) > div > div {
+    margin-top: 20px;
+}
+
+.bookDetail > div:nth-child(2) {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.bookDetail > div:nth-child(1) > div > div > span:nth-child(1) {
+    color: #269abc;
+}
+
+.bookDetail > div:nth-child(2) > span:nth-child(1) {
+    color: #269abc;
+}
+
+.addBook {
+    margin-left: 50px;
+}
+
+.addBook > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+.addBook > div:nth-child(1) > div:last-child > span:nth-child(1) {
+    color: #269abc;
+}
+
+.addBook > div:nth-child(1) > div:nth-child(1) {
+    width: 300px;
+    margin-top: 20px;
+}
+
+.addBook > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 20px;
+}
+
+.addBook > div:nth-child(1) > div:nth-child(1) {
+    margin-left: 30px;
+}
+
+.addBook > div:nth-child(1) > div > div {
+    margin-top: 20px;
+}
+
+.addBook > div:nth-child(2) {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.addBook > div:nth-child(1) > div > div > span:nth-child(1) {
+    color: #269abc;
+    width: 80px;
+    display: inline-block;
+}
+
+.addBook > div:nth-child(2) > span:nth-child(1) {
+    color: #269abc;
+}
+
+.addBook > div:nth-child(3) {
+    margin-left: 250px;
+}
+
+.addBook > div:nth-child(3) > button:nth-child(2) {
+    margin-left: 30px;
+}
+
+.addBook input, .addBook select {
+    width: 200px;
+    height: 30px;
+}
+
+.addBook textarea {
+    width: 585px;
+    height: 150px;
+}
+
+.addNumber {
+    display: flex;
+}
+
+.addNumber img {
+    width: 120px;
+    height: 120px;
+}
+
+.addNumber > div:nth-child(1) > div {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.addNumber > div:nth-child(1) > div:nth-child(1) {
+    color: #269abc;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.addNumber select, .addNumber input {
+    width: 200px;
+    height: 30px;
+}
+
+.addNumber > div:nth-child(2) {
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.order {
+    margin-top: 20px;
+    display: flex;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.order table {
+    font-size: 12px;
+}
+
+.order > div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.order > div:nth-child(1) > div:nth-child(1) {
+    margin-top: 0px;
+}
+
+.order > div:nth-child(1) > div > span:nth-child(1) {
+    color: #269abc;
+}
+
+.order > div:nth-child(1) > div {
+    margin-top: 20px;
+}
+
+.myBtn {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #269abc;
+    border-width: 0px;
+    color: whitesmoke;
+}
+
+.order table tr td {
+    width: 100px;
+}
+
+.rightDivImg {
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.activedPage {
+    background-color: #428BCA;
+    color: white;
+}

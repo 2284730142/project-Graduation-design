@@ -1,0 +1,66 @@
+<div class="personInfo-bg">
+    <div>
+        <div class="personInfo-wrapper" >
+            <!-- 左边导航 -->
+            <div class="personInfo-left">
+                <p style="border-bottom:1px solid #000;"><b>个人设置</b></p>
+                <p><a href="#/personCenter">个人中心</a></p>
+                <p><a href="#/personOrder">我的订单</a></p>
+                <p><a href="#/changePassword">修改密码</a></p>
+                <p><a href="#/createPetInfor">添加宠物</a></p>
+                <p><a href="#/changePersonInfor">修改个人信息</a></p>
+            </div>
+            <!-- // 右边 -->
+            <div class="person-center-right">
+                <!-- 个人资料 -->
+                <div class="person-man">
+                    <div>个人资料</div>
+                    <div class="person-man-div2">
+                        <div class="person-image"><img ng-src="images/none1.gif"/></div>
+                        <div class="person-man-info">
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="2">您好，<span style="color:#00cd98;">{{personInfoList.LoginName}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>真实姓名：{{personInfoList.TrueName}}</td>
+                                    <td>身份证：{{personInfoList.CardId}}</td>
+                                </tr>
+                                <tr>
+                                    <td>性别：{{personInfoList.Sex}}</td>
+                                    <td>电话：{{personInfoList.Phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">地址：{{personInfoList.Address}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 宠物资料 -->
+                <div class="person-pet-head">宠物资料</div>
+                <div class="person-pet" ng-repeat="item in petInfoList">
+                    <!-- 宠物资料前的图标 -->
+                    <div class="person-pet-image">
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <!-- 详细资料 -->
+                    <div class="person-pet-div2">
+                        <div>
+                            <span>昵称：</span><span class="pet-name">{{item.Name}}</span>
+                            <span style="margin-left:100px;">年龄：</span><span class="pet-name">{{item.Age}}岁</span>
+                            <a class="btn btn-primary" href="#/changePetInfor/{{item}}">编辑</a>
+                        </div>
+                        <div>
+                            类别：<span class="pet-name">{{item.CateName}}</span>
+                            <span style="margin-left:100px;">性别：</span><span class="pet-name">{{item.Sex}}</span>
+                            <button class="btn btn-warning" ng-click="btnDelete(item.Id);">删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

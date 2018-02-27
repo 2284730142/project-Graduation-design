@@ -1,0 +1,11 @@
+<?php 
+		session_start(); 
+		if(@is_null($_SESSION['uName']))
+		{
+			header('location:../../login.php');
+		}
+		else
+		{
+			$thisUserName=$_SESSION['uName'];
+		}
+ ?>

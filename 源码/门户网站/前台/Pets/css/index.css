@@ -1,0 +1,204 @@
+/********************************index的页眉*************************************/
+.index-header {
+    z-index: 600;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    line-height: 60px;
+    background: #333333;
+    /*padding: 5px 0;*/
+    font-family: "Microsoft YaHei";
+}
+
+.index-headerMiddle {
+    width: 1080px;
+    margin: auto
+}
+
+.index-logo {
+    float: left;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.index-personBtn {
+    float: right;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.index-personBtn button {
+    background-color: #333333;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    color: #33cb98;
+    border: 1px solid #33cb98;
+    border-radius: 5px;
+}
+
+.index-personBtn button.user {
+    border: 0;
+}
+
+#personCenter, #personCenter:link, #personCenter:active, #personCenter:hover {
+    text-decoration: none;
+    color: #33cb98;
+}
+
+.index-container {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+.index-item {
+    float: left;
+    width: 140px;
+    font-size:0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.index-item a {
+    display: inline-block;
+    width: 140px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    color: #999999;
+}
+
+.index-item > div {
+    width: 140px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #999999;
+    font-size:18px;
+}
+
+.index-item > div:hover {
+    background-color: #33cb98;
+    color: white;
+}
+
+.index-item > ul {
+    list-style-type: none;
+    display: none;
+    background-color: #fff;
+    font-size:0;
+}
+
+.index-item > ul > li {
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size:0;
+}
+
+.index-item > ul > li > a, .index-item > ul > li > a:link, .index-item > ul > li > a:active {
+    font-size:16px;
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height:48px;
+    text-decoration: none;
+    text-align: center;
+    color: #666666;
+}
+
+.index-item > ul > li > a:hover, .index-item a:hover {
+    background-color: #33cb98;
+    color: #FFFFFF;
+}
+
+/*
+*主页登录
+*/
+#yesLogin button {
+    margin-right: 90px;
+}
+
+#personCenter, #personCenter:link, #personCenter:active, #personCenter:hover {
+    text-decoration: none;
+    color: #999999;
+    font-size: 20px;
+}
+
+#personCenter i {
+    margin-left: 2px;
+}
+
+#yesLogin > div {
+    display: none;
+    width: 150px;
+}
+
+#yesLogin > div > div:nth-child(2) {
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: thin solid #f2f2f2;
+    border-left: thin solid #f2f2f2;
+    border-right: thin solid #f2f2f2;
+}
+
+#yesLogin > div > div:nth-child(1) {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    _border-left: 7px solid white;
+    _border-right: 7px solid white;
+    border-bottom: 7px solid white;
+    margin-left: 25px;
+}
+
+#yesLogin li {
+    background: #ffffff;
+    display: block;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    color: #666666;
+}
+
+#yesLogin li > a:hover {
+    background: #f2f2f2;
+    color: #00aa98;
+}
+
+#yesLogin li > a {
+    display: inline-block;
+    font-size: 0;
+    width: 150px;
+    height: 60px;
+    text-decoration: none;
+    color: #666666;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+#yesLogin i {
+    display: inline-block;
+    width: 25px;
+    font-size: 20px;
+}
+
+#yesLogin span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+
+
+

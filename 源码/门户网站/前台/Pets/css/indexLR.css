@@ -1,0 +1,141 @@
+.index-register{
+    z-index: 10000;
+    position:fixed;
+    background-color: rgba(0,0,0,0.4);
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: none;
+}
+.index-login{
+    z-index: 9999;
+    position:fixed;
+    background-color: rgba(0,0,0,0.4);
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: none;
+}
+.index-model-container{
+    position:absolute;
+    width: 500px;
+    height: 400px;
+    left: 50%;
+    top:50%;
+    /*border: 1px solid #cccccc;*/
+    border-radius: 20px;
+    margin-left: -250px;
+    margin-top: -200px;
+    background: #cccccc;
+    background-size: cover;
+    overflow: hidden;
+}
+.index-form-item{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+.index-form-item>div{
+    width: 340px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #cccccc;
+    margin: 10px 75px;
+    background: #ffffff;
+}
+.index-form-item input{
+    width: 300px;
+    height: 50px;
+    border: hidden;
+    line-height: 50px;
+    /*margin-left: 100px;*/
+    padding:0 20px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 12px;
+}
+.index-form-item canvas{
+    margin-top: -3px;
+    border: 1px solid #cccccc;
+    background-color: #00aa98;
+    vertical-align: middle;
+}
+.indexLR-h3{
+    text-align: center;
+    height:70px;
+    line-height: 70px;
+    color:#00AA98;
+    font-size:20px;
+    font-weight: 600;
+}
+.indexLR-foot{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.login-footer{
+    width: 100%;
+    height: 80px;
+    background: #00AA98;
+    color: #ffffff;
+    text-align: right;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-footer span{
+    display: block;
+    margin-top: 20px;
+    margin-right: 80px;
+}
+.login-footer a{
+
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.index-registerBtn{
+    background-color: #00AA98;
+    font-size: 15px;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 80px;
+    border-radius: 12px;
+    border: thin solid #00AA98;
+    cursor: pointer;
+    outline: none;
+}
+.index-loginBtn{
+    background-color: #00AA98;
+    font-size: 15px;
+    color: white;
+    width: 150px;
+    height: 40px;
+    margin-left: 80px;
+    border-radius: 12px;
+    border: thin solid #00AA98;
+    cursor: pointer;
+    outline: none;
+}
+.indexLR-cancel{
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    width: 150px;
+    height: 40px;
+    margin-left: 30px;
+    border: thin solid #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+}
+#error-login-point,#error-register-point{
+    color: #ff0000;
+    position: absolute;
+    top: 55px;
+    left: 80px;
+}

@@ -1,0 +1,452 @@
+.personInfo-bg{
+    background-image:url("../images/background01.jpg");
+    background-repeat:no-repeat ;
+    background-size:100% 100%;
+    background-position-y:bottom;
+    position:fixed;
+    top:0;bottom:0;left:0;right:0;
+    min-width:1080px;
+}
+.personInfo-bg>div{
+    position:fixed;
+    top:0;bottom:0;left:0;right:0;
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#CCCCCC), to(rgba(204, 204, 204,0.7)));
+}
+.personInfo-wrapper input{
+    outline: none;
+    border-radius:3px;
+    border:1px solid #dcdcdc;
+    padding-left:10px;
+    overflow-y:auto;
+}
+.personInfo-wrapper input:hover{
+    border:1px solid #00cb98;
+}
+.personInfo-wrapper input:focus{
+    border:1px solid #00cb98;
+}
+.personInfo-wrapper select{
+    outline: none;
+    border-radius: 2px;
+    border:1px solid #dcdcdc;
+    height:30px;
+}
+/********** 个人中心样式 ***************/
+.personInfo-wrapper{
+    width:1080px;
+    margin:80px auto;
+    overflow:hidden;
+    font-family:Microsoft YaHei;
+}
+.personInfo-left{
+    width:198px;
+    min-height:200px;
+    background: #fff;
+    float:left;
+    padding-bottom:20px;
+    border:1px solid #bbb;
+    border-radius:3px;
+}
+.personInfo-left>p {
+    padding-left:40px;
+    width: 100%;
+    height: 32px;
+    text-align:left;
+    line-height: 40px;
+    font-size: 16px;
+    cursor:pointer;
+}
+.personInfo-left a{
+    text-decoration:none;
+    color:#666;
+}
+.personInfo-left>p:not(:first-child){
+    padding-bottom:10px;
+}
+.personInfo-left a:hover{
+    color:#00aa98;
+}
+.personInfo-left>p:first-child{
+    font-size:18px;
+    padding-bottom:10px;
+}
+.personInfo-right{
+    margin-left:10px;
+    width:868px;
+    min-height:700px;
+    background: #fff;
+    float:left;
+    border:1px solid #bbb;
+    border-radius:3px;
+}
+.personInfo-right>div:nth-child(1){
+    margin-top:20px;
+}
+.personInfo-right-1{
+    color:#33CB98;
+    width:80px;
+    height:48px;
+    text-align:center;
+    line-height:48px;
+    padding:0 10px;
+    font-size:18px;
+    border-bottom:2px solid #33cb98;
+    margin-left:10px;
+    float:left;
+}
+.personInfo-right-2{
+    height:48px;
+    border-bottom:2px solid #DDDADA;
+    width:740px;
+    float:left;
+}
+.personInfo-right-form form{
+    font-size:14px;
+    margin-top:30px;
+}
+.personInfo-right-form div{
+    margin-bottom:20px;
+}
+.personInfo-right-form label{
+    display: inline-block;
+    text-align:right;
+    padding-right:20px;
+    width:150px;
+}
+.personInfo-right-form span{
+    color:#33CB98;
+}
+.personInfo-right-form input{
+    width:240px;
+    height:28px;
+}
+/************** 个人信息表单样式 ********************/
+/**** 男女单选框 ******/
+.sex-btn{
+    display: inline-block;
+    position: relative;
+    width:100px;
+}
+#sexBtn{
+    position: relative;
+    display: inline-block;
+    width: 78px;
+    height:25px;
+    background: white;
+    border:1px solid #00aa98;
+    border-radius:16px;
+    margin-top: 5px;
+
+}
+#sexBtn:after{
+    content: '';
+    position: absolute;
+    left:75px;top:2px;
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+    background: #00aa98;
+}
+#male:checked + #sexBtn:after{
+    position: absolute;
+    left:3px;top:2px;
+    background: #fff;
+}
+#male:checked+#sexBtn{
+    background: #00cb98;
+}
+#male{
+    position: absolute;
+    left:5px;top:6px;
+    width:30px;
+    height:30px;
+    opacity:0;
+    cursor: pointer;
+}
+#female{
+    position: absolute;
+    left:72px;top:6px;
+    width:22px;
+    height:22px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/**************** 宠物信息表单样式 ***********************/
+#petMale,#petFemale{
+    width:15px;
+}
+#petCategory{height:28px;width:100px;}
+
+/************* 提交按钮 ***************/
+.btnSubmit{
+    width:100px;
+    height:36px;
+    margin-left:170px;
+    border-radius:5px;
+    font-size:16px;
+    border:0;
+    background:#33cb98;
+    color:#fff;
+    outline: none;
+    cursor:pointer;
+}
+.btnSubmit:hover{
+    background:#00aa98;
+}
+/*************** 我的订单样式 *******************/
+.order-right{
+    margin-left:10px;
+    width:870px;
+    min-height:700px;
+    float:left;
+}
+.order-form{
+    width:868px;
+    margin-bottom:10px;
+    background: #fff;
+    color:#9A9999;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+.order-form:hover{
+    border:1px solid #33cb98;
+}
+.order-form-details{
+    font-size:0;
+    width:868px;
+    background:#F1F1F1;;
+    border-bottom:1px solid #ccc;
+}
+.order-form-details>span{
+    padding:15px 0;
+    display:inline-block;
+    text-align:center;
+    font-size:15px;
+    width:170px;
+}
+.order-form-pet{
+    font-size:0;
+    width:850px;
+    margin:auto;
+    border-bottom:1px solid #ccc;
+}
+.order-form-pet>span{
+    color:#222;
+    padding:15px 0;
+    display: inline-block;
+    text-align: center;
+    font-size:14px;
+    width:168px;
+}
+/********* 取消订单按钮 *****************/
+.btn-cancel-order{
+    width:100px;
+    height:36px;
+    border:0;
+    color:#fff;
+    outline: none;
+    cursor:pointer;
+    float:right;
+    border-radius:2px;
+}
+.btn-cancel-order-disabled{
+    width:100px;
+    height:36px;
+    border:0;
+    color:#fff;
+    outline: none;
+    float:right;
+    border-radius:2px;
+}
+.btn-cancel-order:hover{
+    background: #e9967a;
+}
+.order-form-cancel{
+    padding:10px 10px 0 0;
+    height:55px;
+}
+.order-remarks{
+    display: inline-block;
+    padding-left:10px;
+}
+/****** 订单头部显示 ******/
+.order-header-wrapper>p{
+    color:#666;
+    width:80px;
+    height:36px;
+    text-align:center;
+    line-height:36px;
+    padding:0 10px;
+    font-size:16px;
+    margin-left:10px;
+    float:left;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    cursor: pointer;
+}
+.order-header-wrapper>p.active,.order-header-wrapper>p:hover{
+    color:#33cb98;
+    border-top:2px solid #33cb98;
+    border-bottom:1px solid #fff;
+    background: #fff;
+}
+.order-header-wrapper{
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+    height:38px;
+}
+/*
+*
+*个人中心页面
+*/
+.person-center-right{
+    margin-left:10px;
+    width:870px;
+    float:left;
+
+}
+/***主人资料***/
+.person-man{
+    width:100%;
+    background:#fff;
+    padding-bottom:20px;
+    border:1px solid #bbb;
+    border-radius:3px;
+}
+.person-man>div:first-child{
+    height:60px;
+    line-height:60px;
+    padding-left:20px;
+    font-size:18px;
+}
+.person-man-div2{
+    overflow:hidden;
+}
+.person-image{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin-left:15px;
+    float:left;
+}
+.person-man-info{
+    float:left;
+    margin-left:10px;
+}
+.person-man-info table td{
+    color:#999;
+    width:235px;
+    height:30px;
+}
+/***宠物资料**/
+.person-pet-head{
+    width:100%;
+    background: #fff;
+    height:30px;
+    line-height:30px;
+    margin-top:20px;
+    padding:10px 0 10px 20px;
+    border:1px solid #bbb;
+    border-radius:3px;
+    font-size:18px;
+}
+.person-pet{
+    background: #fff;
+    margin:10px 0 10px 0;
+    overflow:hidden;
+    padding:20px 0;
+    border:1px solid #bbb;
+    border-radius:3px;
+}
+.person-pet-image{
+    float:left;
+    width:55px;
+    height:80px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.person-pet-image>div{
+    width:22px;
+    height:22px;
+    border:1px solid #00cb98;
+    border-radius:50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    line-height:20px;
+}
+.person-pet-image>div div{
+    width:16px;
+    height:16px;
+    background: #00cb98;
+    border-radius:50%;
+}
+.person-pet-div2>div{
+    margin-bottom:10px;
+    color:#999;
+}
+.person-pet-div2 a{
+    color:#fff;
+    text-decoration: none;
+}
+.person-pet-div2>div button,.person-pet-div2>div a{
+    margin-left:50px;
+}
+.pet-name{
+    display: inline-block;
+    width:150px;
+    padding:0 0 5px 10px;
+    border-bottom:1px solid #ccc;
+    color:#666;
+}
+.person-pet-div2>div:nth-child(3){
+    padding-right:50px;
+}
+/**
+* 通用按钮样式
+**/
+.btn{
+    width:100px;
+    height:36px;
+    border:0;
+    outline: none;
+    cursor:pointer;
+    background:#fff;
+    font-size:16px;
+    display: inline-block;
+    text-align:center;
+    line-height: 36px;
+    color:#666;
+    border-radius:2px;
+    background: none;
+}
+.btn-primary{
+    background: #00cb98;
+    color:#fff;
+}
+.btn-default{
+    background: #f2f2f2;
+    color:#666;
+}
+.btn-primary:hover{
+    background: #00aa98;
+    color:#fff;
+}
+.btn-warning{
+    background: #ff9900;
+    color:#fff;
+}
+.btn-warning:hover{
+    background: #ff7700;
+}
+.btn-danger{
+    background:#D9534F;
+    color:#fff;
+}
+.btn-danger:hover{
+    background:#d43f3a;
+    color:#fff;
+}
